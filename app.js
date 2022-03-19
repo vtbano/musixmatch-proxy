@@ -1,6 +1,6 @@
 const express = require('express')
 const axios = require('axios')
-const hostWhitelist = require('./hostWhitelist.json')
+const hostWhitelist = require('./whitelist.json')
 const app = express()
 const port = process.env.PROXY_PORT || 80
 const apikey = process.env.MUSIXMATCH_API_KEY
