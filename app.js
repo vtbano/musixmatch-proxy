@@ -28,5 +28,6 @@ app.get('/matcher.lyrics.get', async (req, res) => {
 })
 
 app.listen(port, () => {
+  console.log('API key:', apikey)
   console.log(`App listening on port ${port}`)
 })
