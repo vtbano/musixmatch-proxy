@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const axios = require('axios')
 const hostWhitelist = require('./whitelist.json')
 const app = express()
@@ -14,6 +15,8 @@ const restrictHost = (req, res, next) => {
     res.send('No access')
   }
 }
+
+app.use(cors())
 
 app.use(restrictHost)
 
