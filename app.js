@@ -18,6 +18,8 @@ const restriction = (req, res, next) => {
   }
 }
 
+app.enable('trust proxy')
+
 app.use(cors())
 
 app.use(restriction)
