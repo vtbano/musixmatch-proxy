@@ -7,6 +7,7 @@ const port = process.env.PORT || 80
 const apikey = process.env.MUSIXMATCH_API_KEY
 
 const restrictHost = (req, res, next) => {
+  console.log('Headers:', req.headers)
   const host = req.get('host')
   console.log('Incoming request from host:', host)
   if (hostWhitelist.includes(host)) {
