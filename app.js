@@ -9,7 +9,7 @@ const apikey = process.env.MUSIXMATCH_API_KEY
 const restrictHost = (req, res, next) => {
   console.log('origin:', req.get('origin'))
   console.log('referer:', req.get('referer'))
-  const host = req.get('host')
+  const host = req.get('origin')
   console.log('Incoming request from host:', host)
   if (hostWhitelist.includes(host)) {
     next()
