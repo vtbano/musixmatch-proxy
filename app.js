@@ -35,7 +35,7 @@ app.get('/matcher.lyrics.get', async (req, res) => {
 })
 
 app.get('/track.lyrics.get', async (req, res) => {
-  const apiResponse = await axios.get(`https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${req.query.track_id}&apikey=${apikey}`);
+  const apiResponse = await axios.get(`https://api.musixmatch.com/ws/1.1/track.lyrics.get?commontrack_id=${req.query.commontrack_id}&apikey=${apikey}`);
   res.json(apiResponse.data.message.body)
 })
 
