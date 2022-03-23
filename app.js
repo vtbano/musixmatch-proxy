@@ -34,6 +34,11 @@ app.get('/matcher.lyrics.get', async (req, res) => {
   res.json(apiResponse.data.message.body)
 })
 
+app.get('/track.lyrics.get', async (req, res) => {
+  const apiResponse = await axios.get(`https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${req.query.track_id}&apikey=${apikey}`);
+  res.json(apiResponse.data.message.body)
+})
+
 app.listen(port, () => {
   console.log('API key:', apikey)
   console.log(`App listening on port ${port}`)
